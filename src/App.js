@@ -1,8 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react'
-import ToDoItem from './Components/ToDoItem.jsx'
 import Header from './Components/Header.jsx'
-import ToDoForm from './Components/ToDoForm.jsx'
+import ToDoForm from './Components/ToDoForm'
 import TodoList from './Components/TodoList.jsx'
 
 function App() {
@@ -30,12 +29,9 @@ function App() {
   return (
   <div className ="wrapper">
       <Header />
-      {/* <div>
-        <ToDoForm /> 
-        <ToDoItem /> 
-        <ToDoItem /> 
-        <ToDoItem /> 
-      </div> */}
+     <div>
+        <ToDoForm todos ={todos} setTodos ={setTodos}/> 
+      </div> 
 
   <TodoList todos={todos} />
   </div>

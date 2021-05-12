@@ -2,7 +2,7 @@ import styles from '../assets/css/TodoForm.module.css';
 import React, {useState} from 'react'
 import Button from "./Button";
 
-function ToDoForm() {
+function ToDoForm({todos,setTodos}) {
 
 const [input, setInput] = useState('')
 
@@ -16,7 +16,16 @@ const handleSubmit = e => {
 
 const addTodo = () =>{
 console.log(input);
+setTodos(todos.concat([{
+  title: input,
+  id: Date.now(),
+  completed: false,
+  sequence: todos.length
+}]))
+setInput('')
 };
+
+
 
   return (
     <form className ={styles.todo_form} onSubmit ={handleSubmit}>

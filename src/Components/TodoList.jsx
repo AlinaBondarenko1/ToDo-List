@@ -1,10 +1,10 @@
 import React from 'react'
-
+import TodoItem from '../Components/TodoItem'
 
 
 function TodoList({todos}) {
   return (
-    <div>
+    <div className ='TodoList_container'>
         <ul>
             {todos.map((todo) => {
                 return (
