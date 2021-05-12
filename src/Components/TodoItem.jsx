@@ -1,18 +1,11 @@
 import React from 'react'
 
-const styles = {
-  li: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',        
-}
-}
 
 
 function TodoItem({todo}) {
   return (
     <div>
-      <li style = {styles.li}>
+      <li>
                 <span>
                     <input
                         type="checkbox"
