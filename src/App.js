@@ -35,6 +35,7 @@ function App() {
     .catch(err => setError(err))
 },[])
 
+
   return (
   <div className ="wrapper">
       <Header todos={todos}/>
@@ -43,7 +44,7 @@ function App() {
         <TodoForm todos ={todos} setTodos ={setTodos}/> 
       </div> 
       <h3>Актвные задачи</h3>
-      <TodoList todos={todos}/>
+      <TodoList todos ={todos} setTodos ={setTodos}/>
       <h3>Завершенные задачи</h3>
   </div>
   );

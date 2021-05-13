@@ -2,7 +2,16 @@ import React from 'react'
 import TodoItem from '../Components/TodoItem'
 
 
-function TodoList({todos}) {
+function TodoList({todos, setTodos}) {
+
+
+    const removeTodo = (todos,id) =>{
+        debugger
+        setTodos(todos.filter(todo => todo.id !== id))
+          
+      }
+
+debugger
   return (
     <div className ='TodoList_container'>
         <ul>
@@ -11,6 +20,8 @@ function TodoList({todos}) {
                     <TodoItem
                         key={todo.id}
                         todo={todo} 
+                        removeTodo = {removeTodo}
+                        todos = {todos} 
                     />
                 )
             })}

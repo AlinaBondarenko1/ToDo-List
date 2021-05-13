@@ -2,14 +2,11 @@ import React from 'react'
 
 
 
-function TodoItem({todo,todos,setTodos}) {
+function TodoItem({todo,removeTodo,todos}) {
 
-function removeTodo(id) {
-  setTodos(todos.filter(todo => todo.id !== id))
-}
-
-console.log('todo:',todo);
-console.log('todos:',todos);
+// const removeTodo = (todo) =>{
+//   // setTodos(todos.filter(todo => todo.id !== id))
+// }
 
   return (
     <div>
@@ -23,7 +20,7 @@ console.log('todos:',todos);
           </div>
           <div>
             <button>Редактировать</button>
-            <button onClick={removeTodo}>Удалить</button>
+            <button onClick={() => removeTodo(todos, todo.id)}>Удалить</button>
           </div>
       </li>
     </div>

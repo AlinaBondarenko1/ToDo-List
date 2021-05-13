@@ -17,8 +17,8 @@ const handleSubmit = e => {
 const addTodo = () =>{
 console.log(input);
   setTodos(todos.concat([{
-      title: input,
       id: Date.now(),
+      title: input,
       completed: false,
       sequence: todos.length
   }]))
