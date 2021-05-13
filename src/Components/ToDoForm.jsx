@@ -2,7 +2,7 @@ import styles from '../assets/css/TodoForm.module.css';
 import React, {useState} from 'react'
 import Button from "./Button";
 
-function ToDoForm({todos,setTodos}) {
+function TodoForm({todos,setTodos}) {
 
 const [input, setInput] = useState('')
 
@@ -16,18 +16,17 @@ const handleSubmit = e => {
 
 const addTodo = () =>{
 console.log(input);
-setTodos(todos.concat([{
-  title: input,
-  id: Date.now(),
-  completed: false,
-  sequence: todos.length
-}]))
-setInput('')
+  setTodos(todos.concat([{
+      title: input,
+      id: Date.now(),
+      completed: false,
+      sequence: todos.length
+  }]))
+  setInput('')
 };
 
-
-
   return (
+    
     <form className ={styles.todo_form} onSubmit ={handleSubmit}>
       <input type="text" 
       placeholder ="Задача..."
@@ -40,4 +39,4 @@ setInput('')
   )
 }
 
-export default ToDoForm
+export default TodoForm;
